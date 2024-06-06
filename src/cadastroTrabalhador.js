@@ -1,42 +1,51 @@
 document.addEventListener("DOMContentLoaded", function() {
-    // Inicialize o SDK do Back4App
+    // Inicializa o Parse
     Parse.initialize("Dt5qsyIvBF3KLozPDHVAnhdjxS8CBIIW6BI6chcM", "OjADQ3UETevvC09vTTCYX2MqKM7Wx6gwLW4JLMuE");
     Parse.serverURL = "https://parseapi.back4app.com/";
 
-    // Adicione um evento de submissão ao formulário de cadastro
-    document.getElementById("cadastroForm").addEventListener("submit", async function(event) {
-        event.preventDefault(); // Impede o comportamento padrão do formulário
+    document.getElementById("btn-login").addEventListener("click", async function() {
+        console.log("Botão 'Cadastrar' foi clicado");
 
         // Obtenha os valores dos campos de entrada
-        const email = document.getElementById("input-email").value;
-        // Obtenha outros valores de entrada conforme necessário
+        const email = document.getElementById('input-email').value;
+        const senha = document.getElementById('input-password').value;
+        const trabalho = document.getElementById('input-trabalho').value;
+        const orcamento = document.getElementById('input-orcamento').value.replace("R$ ", "").replace(",", ".");
+        const formacao = document.getElementById('input-formação').value;
+        const descricao = document.querySelector('textarea[name="message"]').value;
+
+        // Log para verificar os valores capturados
+        console.log("Email:", email);
+        console.log("Senha:", senha);
+        console.log("Profissão:", trabalho);
+        console.log("Orçamento:", orcamento);
+        console.log("Formação:", formacao);
+        console.log("Descrição:", descricao);
+
+        // Cria um novo objeto Parse para a classe Trabalhador
+        const Trabalhador = Parse.Object.extend("Trabalhador");
+        const trabalhador = new Trabalhador();
+
+        // Define os valores do objeto
+        trabalhador.set("email", email);
+        trabalhador.set("senha", senha);
+        trabalhador.set("profissao", trabalho);
+        trabalhador.set("orcamentoMedio", parseFloat(orcamento));
+        trabalhador.set("formacao", formacao);
+        trabalhador.set("descricao", descricao);
 
         try {
-            // Crie um novo objeto de usuário no Back4App
-            const user = new Parse.User();
-            user.set("username", email); // Use o email como nome de usuário
-            user.set("email", email);
-            // Defina outros campos de usuário conforme necessário
-
-            // Salve o novo usuário no Back4App
-            const newUser = await user.signUp();
-            console.log("Novo usuário cadastrado:", newUser);
-            
-            // Redirecione o usuário para outra página (opcional)
-            window.location.href = "cadastroTrabalhadorSucesso.html"; // Página de sucesso de cadastro
+            // Salva o objeto no Back4App
+            await trabalhador.save();
+            alert("Trabalhador cadastrado com sucesso!");
+            console.log("Trabalhador cadastrado com sucesso!");
         } catch (error) {
-            console.error("Erro ao cadastrar usuário:", error);
-            alert("Erro ao cadastrar usuário. Por favor, tente novamente.");
+            console.error("Erro ao cadastrar trabalhador:", error);
+            alert("Ocorreu um erro ao cadastrar o trabalhador. Tente novamente.");
         }
     });
-
-    const orcamentoInput = document.getElementById('input-orcamento');
-
-    orcamentoInput.addEventListener('input', formatCurrency);
-
-    // Inicializa com o formato correto
-    formatCurrency.call(orcamentoInput);
 });
+
 
 function formatCurrency() {
     let value = this.value.replace(/[^\d,]/g, '').replace(',', '.');

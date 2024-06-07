@@ -2,6 +2,6 @@
 
 describe('Testando Acesso no Verecel', () => {
     it('Primeiro Uso do Cypress', () =>{
-        cy.visit("https://contrufacilas.vercel.app/")
+        cy.visit("http://127.0.0.1:5500/index.html")
     });
 });

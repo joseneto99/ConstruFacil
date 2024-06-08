@@ -22,6 +22,7 @@ document.addEventListener("DOMContentLoaded", function() {
             const email = document.getElementById("signup-email").value;
             const senha = document.getElementById("signup-password").value;
             const profissao = document.getElementById("signup-profissao").value;
+            const telefone = document.getElementById("signup-telefone").value;
             const orcamento = document.getElementById("signup-orcamento").value;
 
             console.log("Tentando cadastrar parceiro:", nome, email);
@@ -31,6 +32,7 @@ document.addEventListener("DOMContentLoaded", function() {
             profissional.set("email", email);
             profissional.set("senha", senha);
             profissional.set("profissao", profissao);
+            profissional.set("telefone", profissao);
             profissional.set("orcamento", Number(orcamento));
 
             try {

@@ -8,7 +8,7 @@ document.addEventListener("DOMContentLoaded", function() {
     const voltarBtn = document.getElementById("btn-voltar");
     if (voltarBtn) {
         voltarBtn.addEventListener("click", function() {
-            window.location.href = "index.html";
+            window.location.href = "principal.html";
         });
     } else {
         console.error("Botão de voltar não encontrado");

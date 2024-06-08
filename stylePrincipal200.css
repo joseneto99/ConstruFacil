@@ -136,6 +136,21 @@ header a:hover, footer a:hover {
   background: rgba(255,255,255,0.3);
 }
 
+.cards .card a {
+  text-decoration: none;
+  color: inherit; 
+  display: block; 
+}
+
+.cards .card {
+  transition: transform 0.3s ease-in-out; 
+}
+
+.cards .card:hover {
+  transform: scale(1.05); 
+}
+
+
 section {
   display: flex;
   align-items: center;

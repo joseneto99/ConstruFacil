@@ -1,110 +1,77 @@
 <!DOCTYPE html>
+<!-- codingmanish - www.codingmanish.in -->
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
+  <head>
+    <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Site</title>
+    <title>Camping Website</title>
     <link rel="stylesheet" href="styleBuscarProfissional.css">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-  <script src="src/carregarEncanador.js"></script>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
-  integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-</head>
-<body style="background-color: blanchedalmond;">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+  </head>
+  <body>
+
     <header>
-    <nav class="navbar bg-dark border-bottom border-body" data-bs-theme="dark">
-      <ul class="nav justify-content-center">
-        <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="./index.html">Inicio</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#about-section">Sobre</a>
-        </li>
-    
-        <div class="dropdown">
-          <button class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            Buscar Profissional
-          </button>
-          <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-            <li><a class="dropdown-item" href="pagina-arquiteto.html">Arquiteto</a></li>
-            <li><a class="dropdown-item" href="pagina-engenheiro.html">Engenheiro Civil</a></li>
-            <li><a class="dropdown-item" href="pagina-eletricista.html">Eletricista</a></li>
-            <li><a class="dropdown-item" href="pagina-engenheiro-eletrico.html">Encanador</a></li>
-            <li><a class="dropdown-item" href="pagina-engenheiro-eletrico.html">Pedreiro</a></li>
+        <nav class="navbar">
+          <h2 class="logo"><a href="#">ConstruFacil</a></h2>
+          <input type="checkbox" id="menu-toggler">
+          <label for="menu-toggler" id="hamburger-btn">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white" width="24px" height="24px">
+              <path d="M0 0h24v24H0z" fill="none"/>
+              <path d="M3 18h18v-2H3v2zm0-5h18V11H3v2zm0-7v2h18V6H3z"/>
+            </svg>
+          </label>
+          <ul class="all-links">
+            <li><a href="principal.html">Home</a></li>
+            <li><a href="login.html">Login</a></li>
           </ul>
-        </div>
-        <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="loginNormal.html">Login</a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="loginTrabalhador.html">Profissional Parceiro</a>
+        </nav>
+      </header>
+
+      <section class="services" id="services">
+        <h2>Encanadores</h2>
+        <p>Nossos encanadores pronfissionais disponiveis para voce</p>
+        <ul class="cards">
+          <li class="card">
+            <img src="https://images.unsplash.com/photo-1504280390367-361c6d9f38f4?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8Y2FtcGluZ3xlbnwwfHwwfHx8MA%3D%3D" alt="img">
+            <h3>Tents</h3>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quidem, vel.</p>
           </li>
-        <li class="nav-item">
-          <a class="nav-link disabled" aria-disabled="true"></a>
-        </li>
-        <li class="nav-item">
-          <div class="container-fluid">
-            <form class="form-inline">
-              <input class="form-control mr-sm-2" type="search" placeholder="Pesquisar" aria-label="Pesquisar">
-              <button class="btn btn-outline-success my-2 my-sm-0" type="submit"><i class="fas fa-search"></i></button>
-            </form>
-          </div>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link disabled" aria-disabled="true"></a>
-        </li>
-      </ul>
-    </nav> 
-    <!-- place navbar here -->
-  </header>
-      <div class="perfil">
-        <img src="images/encanador.png" alt="Foto de Perfil">
-        <div class="informacoes">
-            <h2>Severino</h2>
-            <p class="p">Email: sev@gmail.com</p>
-            <p class="p">Profissão: Encanador</p>
-            <p class="p">Gênero: Masculino</p>
-            <p class="p">Descrição: Ai sim pai.</p>
-            <div class="avaliacoes">
-                <h3>Avaliações</h3>
-                <p>4,5 estrelas - "Excelente trabalho!"</p>
-                <p>4 estrelas - "top."</p>
-            </div>
+          <li class="card">
+            <img src="https://images.unsplash.com/photo-1537905569824-f89f14cceb68?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8Y2FtcGluZ3xlbnwwfHwwfHx8MA%3D%3D" alt="img">
+            <h3>Sleeping Bags</h3>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quidem, vel.</p>
+          </li>
+          <li class="card">
+            <img src="https://plus.unsplash.com/premium_photo-1676140621026-5c10ec3a875f?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OXx8Y2FtcGluZ3xlbnwwfHwwfHx8MA%3D%3D" alt="img">
+            <h3>Camp Stoves</h3>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quidem, vel.</p>
+          </li>
+          <li class="card">
+            <img src="https://images.unsplash.com/photo-1496545672447-f699b503d270?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjJ8fGNhbXBpbmd8ZW58MHx8MHx8fDA%3D" alt="img">
+            <h3>Backpacks</h3>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quidem, vel.</p>
+          </li>
+          <li class="card">
+            <img src="https://images.unsplash.com/photo-1601134917279-ef70a0a90f18?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MzB8fGNhbXBpbmd8ZW58MHx8MHx8fDA%3D" alt="img">
+            <h3>Camp Chairs</h3>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quidem, vel.</p>
+          </li>
+          <li class="card">
+            <img src="https://images.unsplash.com/photo-1529385101576-4e03aae38ffc?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MzR8fGNhbXBpbmd8ZW58MHx8MHx8fDA%3D" alt="img">
+            <h3>Camp Lights</h3>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quidem, vel.</p>
+          </li>
+        </ul>
+      </section>
+
+      <footer>
+        <div>
+          <span>ConstruFacil é o que ta tendo!</span>
+          <span class="link">
+              <a href="#">Home</a>
+              <a href="#contact">Contact</a>
+          </span>
         </div>
-    </div>
-    <div class="perfil">
-      <img src="images/encanador.png" alt="Foto de Perfil">
-      <div class="informacoes">
-          <h2>Renato Cariani</h2>
-          <p class="p">Email: renato@gmail.com</p>
-          <p class="p">Profissão: Encanador</p>
-          <p class="p">Gênero: Masculino</p>
-          <p class="p">Descrição: whey de 1kg.</p>
-          <div class="avaliacoes">
-              <h3>Avaliações</h3>
-              <p>5 estrelas - "Excelente trabalho!"</p>
-              <p>5 estrelas - "Muito profissional."</p>
-          </div>
-      </div>
-  </div>
-  <div class="perfil">
-    <img src="images/encanador.png" alt="Foto de Perfil">
-    <div class="informacoes">
-        <h2>caio</h2>
-        <p class="p">Email: caio@example.com</p>
-        <p class="p">Profissão: Encanador</p>
-        <p class="p">Gênero: Masculino</p>
-        <p class="p">Descrição: Sou muito bom com isso, cano é a minha praia.</p>
-        <div class="avaliacoes">
-            <h3>Avaliações</h3>
-            <p>5 estrelas - "Excelente trabalho!"</p>
-            <p>4 estrelas - "Muito profissional."</p>
-        </div>
-    </div>
-</div>
-</body>
+      </footer>
+  </body>
 </html>

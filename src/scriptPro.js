@@ -27,12 +27,12 @@ document.addEventListener("DOMContentLoaded", function() {
 
             console.log("Tentando cadastrar parceiro:", nome, email);
 
-            const profissional = new Parse.Profissional();
-            profissional.set("nome", nome);
+            const user = new Parse.User();
+            profissional.set("username", nome);
             profissional.set("email", email);
-            profissional.set("senha", senha);
+            profissional.set("password", senha);
             profissional.set("profissao", profissao);
-            profissional.set("telefone", profissao);
+            profissional.set("telefone", telefone);
             profissional.set("orcamento", Number(orcamento));
 
             try {

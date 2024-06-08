@@ -4,44 +4,46 @@ Parse.serverURL = 'https://parseapi.back4app.com/';
 
 // Função para buscar usuários por profissão
 async function fetchUsersByProfession(profession) {
-  const User = Parse.Object.extend("_User");  // Use "_User" para a classe de usuários
-  const query = new Parse.Query(User);
-  query.equalTo("profissao", profession);  // Certifique-se de que o campo 'profissao' está correto
-  try {
-    const results = await query.find();
-    displayUsers(results);
-  } catch (error) {
-    console.error("Error while fetching users: ", error);
-  }
+  displayUsers(profession);
 }
 
 // Função para exibir usuários
-function displayUsers(users) {
-  const cardsContainer = document.querySelector('.cards');
-  cardsContainer.innerHTML = ''; // Limpa o container de cards
+async function displayUsers(users) {
+  const query = new Parse.Query("Profissional");
+  query.equalTo("Profissao", "Arquiteto");
+  const valor = await query.find();
+  console.log(valor[0].get("Nome"));
 
-  users.forEach(user => {
-    const card = document.createElement('li');
-    card.className = 'card';
+  var ul = document.getElementById("gerar");
 
-    const userImage = user.get('image'); // Supondo que o campo da imagem seja uma URL
-    const userName = user.get('nome');
-    const userBudget = user.get('orcamento');
-    const userPhone = user.get('telefone');
-    const userProfession = user.get('profissao');
+  for(let i = 0; i < valor.length; i++) {
+    var li = document.createElement("li");
+    li.classList.add("card");
 
-    card.innerHTML = `
-      <a href="pagina-${userProfession}.html">
-        <img src="${userImage}" alt="img">
-        <h2>${userName}</h2>
-        <h3>${userProfession}</h3>
-        <p>Orçamento: ${userBudget}</p>
-        <p>Telefone: ${userPhone}</p>
-      </a>
-    `;
+    var img = document.createElement("img");
+    img.src = "images/usuario.png";
+    img.alt = "img";
 
-    cardsContainer.appendChild(card);
-  });
+    var h3 = document.createElement("h3");
+    h3.textContent = "Nome: " + valor[i].get("Nome");
+
+    var p1 = document.createElement("p");
+    p1.textContent = "Telefone: " + valor[i].get("Telefone");
+
+    var p2 = document.createElement("p");
+    p2.textContent = "Orçamento: " + valor[i].get("Orcamento");
+
+    var p3 = document.createElement("p");
+    p3.textContent = "Nota: 5.0";
+
+    li.appendChild(img);
+    li.appendChild(h3);
+    li.appendChild(p1);
+    li.appendChild(p2);
+    li.appendChild(p3);
+
+    ul.appendChild(li);
+  };
 }
 
 // Chame a função com a profissão desejada

@@ -5,6 +5,15 @@ document.addEventListener("DOMContentLoaded", function() {
     Parse.initialize("Dt5qsyIvBF3KLozPDHVAnhdjxS8CBIIW6BI6chcM", "OjADQ3UETevvC09vTTCYX2MqKM7Wx6gwLW4JLMuE");
     Parse.serverURL = "https://parseapi.back4app.com/";
 
+    const voltarBtn = document.getElementById("btn-voltar");
+    if (voltarBtn) {
+        voltarBtn.addEventListener("click", function() {
+            window.location.href = "index.html";
+        });
+    } else {
+        console.error("Botão de voltar não encontrado");
+    }
+
     // Cadastro de usuário
     const cadastrarBtn = document.getElementById("btn-cadastrar");
     if (cadastrarBtn) {

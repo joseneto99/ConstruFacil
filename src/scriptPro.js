@@ -62,7 +62,7 @@ document.addEventListener("DOMContentLoaded", function() {
                 await Parse.User.logIn(email, senha);
                 alert("Login realizado com sucesso!");
                 console.log("Login realizado com sucesso!");
-                window.location.href = "index.html";
+                window.location.href = "principal.html";
             } catch (error) {
                 console.error("Erro ao fazer login:", error);
                 alert("Erro ao fazer login: " + error.message);

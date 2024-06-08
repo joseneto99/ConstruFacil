@@ -225,20 +225,3 @@ body{
 .btn-voltar:hover {
     background-color: #946e06;
 }
-
-.btn-profissional {
-    position: absolute;
-    top: 10px;
-    left: 115px;
-    padding: 10px 20px;
-    font-size: 16px;
-    background-color: #fdba00;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-.btn-profissional:hover {
-    background-color: #946e06;
-}

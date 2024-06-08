@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="styleLoginPro.css">
+    <title>Página de Login</title>
+    <script type="text/javascript" src="https://npmcdn.com/parse/dist/parse.min.js"></script>
+</head>
+
+<body>
+
+    <button id="btn-voltar" class="btn-voltar">
+        Inicio
+    </button>
+
+    <div class="container" id="container">
+        <div class="form-container sign-up">
+            <form>
+                <h1>Crie a sua conta</h1>
+                <span>Informe os seus dados</span>
+                <input type="text" id="signup-nome" placeholder="Nome" required>
+                <input type="email" id="signup-email" placeholder="Email" required>
+                <input type="password" id="signup-password" placeholder="Senha" required>
+                <input type="text" id="signup-profissao" placeholder="Profissão" required>
+                <input type="number" id="signup-orcamento" placeholder="Orçamento-médio" required>
+                <button type="button" id="btn-cadastrar">Cadastrar</button>
+            </form>
+        </div>
+        <div class="form-container sign-in">
+            <form>
+                <h1>Login</h1>
+                <span>Use seu email e senha para entrar</span>
+                <input type="email" id="login-email" placeholder="Email" required>
+                <input type="password" id="login-password" placeholder="Senha" required>
+                <button type="button" id="btn-login">Entrar</button>
+            </form>
+        </div>
+        <div class="toggle-container">
+            <div class="toggle">
+                <div class="toggle-panel toggle-left">
+                    <h1>Faça seu login!</h1>
+                    <p>Entre com seu cadastro para poder usar o nosso site</p>
+                    <button class="hidden" id="login">Login</button>
+                </div>
+                <div class="toggle-panel toggle-right">
+                    <h1>Crie a sua conta!</h1>
+                    <p>Registre-se com seus dados pessoais para poder se tornar um dos nossos parceiros</p>
+                    <button class="hidden" id="register">Cadastre-se</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="src/script.js"></script>
+</body>
+
+</html>

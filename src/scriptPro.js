@@ -14,39 +14,33 @@ document.addEventListener("DOMContentLoaded", function() {
         console.error("Botão de voltar não encontrado");
     }
 
-    const profissionalBtn = document.getElementById("btn-profissional");
-    if (profissionalBtn) {
-        profissionalBtn.addEventListener("click", function() {
-            window.location.href = "loginPro.html";
-        });
-    } else {
-        console.error("Botão de voltar não encontrado");
-    }
-
-    // Cadastro de usuário
+    // Cadastro do profissional
     const cadastrarBtn = document.getElementById("btn-cadastrar");
     if (cadastrarBtn) {
         cadastrarBtn.addEventListener("click", async function() {
             const nome = document.getElementById("signup-nome").value;
             const email = document.getElementById("signup-email").value;
             const senha = document.getElementById("signup-password").value;
+            const profissao = document.getElementById("signup-profissao").value;
+            const orcamento = document.getElementById("signup-orcamento").value;
 
-            console.log("Tentando cadastrar usuário:", nome, email);
+            console.log("Tentando cadastrar parceiro:", nome, email);
 
-            const usuario = new Parse.User();
-            usuario.set("username", email);
-            usuario.set("password", senha);
-            usuario.set("email", email);
-            usuario.set("nome", nome);
+            const profissional = new Parse.Profissional();
+            profissional.set("nome", nome);
+            profissional.set("email", email);
+            profissional.set("senha", senha);
+            profissional.set("profissao", profissao);
+            profissional.set("orcamento", Number(orcamento));
 
             try {
-                await usuario.signUp();
-                alert("Usuário cadastrado com sucesso!");
-                console.log("Usuário cadastrado com sucesso!");
+                await profissional.save();
+                alert("Parceiro cadastrado com sucesso!");
+                console.log("Parceiro cadastrado com sucesso!");
                 // Redirecionar para a página de login ou outra página apropriada
             } catch (error) {
-                console.error("Erro ao cadastrar usuário:", error);
-                alert("Erro ao cadastrar usuário: " + error.message);
+                console.error("Erro ao cadastrar parceiro:", error);
+                alert("Erro ao cadastrar parceiro: " + error.message);
             }
         });
     } else {

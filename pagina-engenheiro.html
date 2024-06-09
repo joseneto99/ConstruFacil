@@ -7,6 +7,7 @@
     <title>Camping Website</title>
     <link rel="stylesheet" href="styleBuscarProfissional.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+    <script type="text/javascript" src="https://npmcdn.com/parse/dist/parse.min.js"></script>
   </head>
   <body>
 
@@ -29,51 +30,12 @@
 
       <section class="services" id="services">
         <h2>Engenheiro Civil</h2>
-        <p>Nossos Engenheiros pronfissionais disponiveis para voce</p>
-        <ul class="cards">
-          <li class="card">
-            <img src="images/usuario.png" alt="img">
-            <h3>Bruno fernandes</h3>
-            <p>Telefone: 81995633783</p>
-            <p>Orçamento: R$ 5000,00</p>
-            <p>Nota: 4.6</p>
-          </li>
-          <li class="card">
-            <img src="images/usuario.png" alt="img">
-            <h3>Gabriel Jesus</h3>
-            <p>Telefone: 11945123137</p>
-            <p>Orçamento: R$ 9000,00</p>
-            <p>Nota: 4.1</p>
-          </li>
-          <li class="card">
-            <img src="images/usuario.png" alt="img">
-            <h3>Ronaldo fenomeno</h3>
-            <p>Telefone: 12340008234</p>
-            <p>Orçamento: R$ 7500,00</p>
-            <p>Nota: 4.8</p>
-          </li>
-          <li class="card">
-            <img src="images/usuario.png" alt="img">
-            <h3>Ronaldinho</h3>
-            <p>Telefone: 91228678234</p>
-            <p>Orçamento: R$ 10000,00</p>
-            <p>Nota: 4.5</p>
-          </li>
-          <li class="card">
-            <img src="images/usuario.png" alt="img">
-            <h3>Marcus Rashford</h3>
-            <p>Telefone: 77900037234</p>
-            <p>Orçamento: R$ 8200,00</p>
-            <p>Nota: 4.6</p>
-          </li>
-          <li class="card">
-            <img src="images/usuario.png" alt="img">
-            <h3>Kobiie maino</h3>
-            <p>Telefone: 31995678234</p>
-            <p>Orçamento: R$ 2000,00</p>
-            <p>Nota: 3.0</p>
-          </li>
+        <p>Nossos engenheiros profissionais disponiveis para voce</p>
+        
+        <ul class="cards" id="gerar"> 
+          
         </ul>
+      
       </section>
 
       <footer>
@@ -85,5 +47,6 @@
           </span>
         </div>
       </footer>
+      <script src="src/carregarEngenheiro.js"></script>
   </body>
 </html>

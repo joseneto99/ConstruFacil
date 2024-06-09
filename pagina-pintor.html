@@ -7,6 +7,7 @@
     <title>Camping Website</title>
     <link rel="stylesheet" href="styleBuscarProfissional.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+    <script type="text/javascript" src="https://npmcdn.com/parse/dist/parse.min.js"></script>
   </head>
   <body>
 
@@ -28,52 +29,13 @@
       </header>
 
       <section class="services" id="services">
-        <h2>Encanador</h2>
-        <p>Nossos encanadores pronfissionais disponiveis para voce</p>
-        <ul class="cards">
-          <li class="card">
-            <img src="images/usuario.png" alt="img">
-            <h3>Ruben neves</h3>
-            <p>Telefone: 81995633783</p>
-            <p>Orçamento: R$ 50,00</p>
-            <p>Nota: 4.7</p>
-          </li>
-          <li class="card">
-            <img src="images/usuario.png" alt="img">
-            <h3>Mohammed Salah</h3>
-            <p>Telefone: 81945123137</p>
-            <p>Orçamento: R$ 96,00</p>
-            <p>Nota: 4.4</p>
-          </li>
-          <li class="card">
-            <img src="images/usuario.png" alt="img">
-            <h3>Virgil vandjik</h3>
-            <p>Telefone: 12345678234</p>
-            <p>Orçamento: R$ 70,00</p>
-            <p>Nota: 3.8</p>
-          </li>
-          <li class="card">
-            <img src="images/usuario.png" alt="img">
-            <h3>Thiago alcantra</h3>
-            <p>Telefone: 81225678234</p>
-            <p>Orçamento: R$ 100,00</p>
-            <p>Nota: 3.9</p>
-          </li>
-          <li class="card">
-            <img src="images/usuario.png" alt="img">
-            <h3>Naruto usumaqui</h3>
-            <p>Telefone: 81900037234</p>
-            <p>Orçamento: R$ 80,00</p>
-            <p>Nota: 4.5</p>
-          </li>
-          <li class="card">
-            <img src="images/usuario.png" alt="img">
-            <h3>Saske uchica</h3>
-            <p>Telefone: 81995678234</p>
-            <p>Orçamento: R$ 200,00</p>
-            <p>Nota: 5.0</p>
-          </li>
+        <h2>Pintores</h2>
+        <p>Nossos pintores profissionais disponiveis para voce</p>
+        
+        <ul class="cards" id="gerar"> 
+          
         </ul>
+      
       </section>
 
       <footer>
@@ -85,5 +47,6 @@
           </span>
         </div>
       </footer>
+      <script src="src/carregarPintor.js"></script>
   </body>
 </html>

@@ -7,6 +7,7 @@
     <title>Camping Website</title>
     <link rel="stylesheet" href="styleBuscarProfissional.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+    <script type="text/javascript" src="https://npmcdn.com/parse/dist/parse.min.js"></script>
   </head>
   <body>
 
@@ -29,51 +30,12 @@
 
       <section class="services" id="services">
         <h2>Eletricistas</h2>
-        <p>Nossos eletricistas pronfissionais disponiveis para voce</p>
-        <ul class="cards">
-          <li class="card">
-            <img src="images/usuario.png" alt="img">
-            <h3>Iago costa</h3>
-            <p>Telefone: 81995678234</p>
-            <p>Orçamento: R$ 1000,00</p>
-            <p>Nota: 3.2</p>
-          </li>
-          <li class="card">
-            <img src="images/usuario.png" alt="img">
-            <h3>Renato cariani</h3>
-            <p>Telefone: 55945878137</p>
-            <p>Orçamento: R$ 400,00</p>
-            <p>Nota: 4.2</p>
-          </li>
-          <li class="card">
-            <img src="images/usuario.png" alt="img">
-            <h3>Vinicius Junior</h3>
-            <p>Telefone: 81995678234</p>
-            <p>Orçamento: R$ 350,00</p>
-            <p>Nota: 4.8</p>
-          </li>
-          <li class="card">
-            <img src="images/usuario.png" alt="img">
-            <h3>Savinho</h3>
-            <p>Telefone: 81460078234</p>
-            <p>Orçamento: R$ 150,00</p>
-            <p>Nota: 2.9</p>
-          </li>
-          <li class="card">
-            <img src="images/usuario.png" alt="img">
-            <h3>Neymar</h3>
-            <p>Telefone: 81907903234</p>
-            <p>Orçamento: R$ 500,00</p>
-            <p>Nota: 4.5</p>
-          </li>
-          <li class="card">
-            <img src="images/usuario.png" alt="img">
-            <h3>Jose fernando</h3>
-            <p>Telefone: 81995678234</p>
-            <p>Orçamento: R$ 700,00</p>
-            <p>Nota: 5.0</p>
-          </li>
+        <p>Nossos eletricistas profissionais disponiveis para voce</p>
+        
+        <ul class="cards" id="gerar"> 
+          
         </ul>
+      
       </section>
 
       <footer>
@@ -85,5 +47,6 @@
           </span>
         </div>
       </footer>
+      <script src="src/carregarEletricista.js"></script>
   </body>
 </html>

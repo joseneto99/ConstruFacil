@@ -2,15 +2,14 @@
 Parse.initialize("Dt5qsyIvBF3KLozPDHVAnhdjxS8CBIIW6BI6chcM", "OjADQ3UETevvC09vTTCYX2MqKM7Wx6gwLW4JLMuE");
 Parse.serverURL = 'https://parseapi.back4app.com/';
 
-// Função para buscar usuários por profissão
 async function fetchUsersByProfession(profession) {
   displayUsers(profession);
 }
 
-// Função para exibir usuários
+//Gerar os cards
 async function displayUsers(users) {
   const query = new Parse.Query("Profissional");
-  query.equalTo("Profissao", "Encanador");
+  query.equalTo("Profissao", "Pintor");
   const valor = await query.find();
   console.log(valor[0].get("Nome"));
 
@@ -46,7 +45,7 @@ async function displayUsers(users) {
   };
 }
 
-// Chame a função com a profissão desejada
+// Chama a função com a profissão que eu quero 
 document.addEventListener('DOMContentLoaded', (event) => {
-  fetchUsersByProfession("encanador");  // Ajuste a profissão conforme necessário
+  fetchUsersByProfession("pintor");
 });

@@ -25,7 +25,6 @@ O sistema ConstruFacil é uma plataforma online destinada a facilitar a conexão
 
 ## e) Figura do Sistema
 
-![image](https://github.com/joseneto99/ConstruFacil/assets/111092864/b9a77677-c016-48b0-a095-82ad67e728bb)
-
+![image](https://github.com/joseneto99/ConstruFacil/assets/111092864/9c106c07-b1cc-4d1b-be8a-712f6ca5c6fb)
 
 https://construfacil012.vercel.app/

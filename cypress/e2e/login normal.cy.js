@@ -1,11 +1,17 @@
-context('Actions', () => {
+describe('Login Page Tests', () => {
   beforeEach(() => {
-    cy.visit('http://127.0.0.1:5500/principal.html')
-  })
-  it('Preenche e envia o formulário de contato', () => {
-    cy.visit('http://127.0.0.1:5500/login.html');
-    cy.get('login-email').type('fulano@email.com');
-    cy.get('login-password').type('123.');
-  
+      cy.visit('login.html');
   });
-})
+
+  it('Should log in successfully with correct credentials', () => {
+      cy.get('#login-email').type('seuemail@example.com');
+      cy.get('#login-password').type('suasenha');
+      cy.get('#btn-login').click();
+  });
+
+  it('Should show an error message with incorrect credentials', () => {
+      cy.get('#login-email').type('cris@example.com');
+      cy.get('#login-password').type('123'); 
+      cy.get('#btn-login').click();
+  });
+});

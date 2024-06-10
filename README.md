@@ -13,7 +13,7 @@ O sistema ConstruFacil é uma plataforma online destinada a facilitar a conexão
 
 ## b) Figura do Diagrama de Casos de Uso do sistema: 
 
-![image](https://github.com/joseneto99/ConstruFacil/assets/111092864/6d760190-d886-41eb-a219-f01ca66c0893)
+![image](https://github.com/joseneto99/ConstruFacil/assets/111092864/b0400f87-d487-434b-8c2f-62b3cc1b7685)
 
 ## c) Figura do Diagrama de Classes do sistema:
 

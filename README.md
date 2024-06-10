@@ -13,7 +13,7 @@ O sistema ConstruFacil é uma plataforma online destinada a facilitar a conexão
 
 ## b) Figura do Diagrama de Casos de Uso do sistema: 
 
-![image](https://github.com/joseneto99/ConstruFacil/assets/111092864/b0400f87-d487-434b-8c2f-62b3cc1b7685)
+![Screenshot_20240516-211423~2](https://github.com/joseneto99/ConstruFacil/assets/111092864/dc144861-0ea7-4d48-a48e-86e411d7bcea)
 
 ## c) Figura do Diagrama de Classes do sistema:
 
@@ -25,7 +25,6 @@ O sistema ConstruFacil é uma plataforma online destinada a facilitar a conexão
 
 ## e) Figura do Sistema
 
-![image](https://github.com/joseneto99/ConstruFacil/assets/111092864/b9a77677-c016-48b0-a095-82ad67e728bb)
-
+![image](https://github.com/joseneto99/ConstruFacil/assets/111092864/10a8f2fd-3c15-464f-b791-9f51bd01d20d)
 
 https://contrufacil012.vercel.app/

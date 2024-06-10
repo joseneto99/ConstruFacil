@@ -58,11 +58,21 @@ document.addEventListener("DOMContentLoaded", function() {
 
             console.log("Tentando login com:", email);
 
+            const Profissional = Parse.Object.extend("Profissional");
+            const query = new Parse.Query(Profissional);
+            query.equalTo("Email", email);
+            query.equalTo("Senha", senha);
+
             try {
-                await Parse.User.logIn(email, senha);
-                alert("Login realizado com sucesso!");
-                console.log("Login realizado com sucesso!");
-                window.location.href = "principal.html";
+                const result = await query.first();
+                if (result) {
+                    alert("Login realizado com sucesso!");
+                    console.log("Login realizado com sucesso!");
+                    localStorage.setItem("profissionalId", result.id);
+                    window.location.href = "principal.html";
+                } else {
+                    throw new Error("Email ou senha incorretos");
+                }
             } catch (error) {
                 console.error("Erro ao fazer login:", error);
                 alert("Erro ao fazer login: " + error.message);
